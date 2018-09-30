@@ -5,11 +5,8 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="html 5 template">
-<meta name="author" content="tonytemplates.com">
-<meta name="format-detection" content="telephone=no">
-<link rel="icon" href="favicon.ico">
-<title>Computer Repair - HTML 5 TEMPLATE</title>
+<link rel="icon" href="images/amanecer_logo.jpg">
+<title>Amanecer Tech PVT. LTD.</title>
 <!-- Bootstrap core CSS -->
 <link href="css/plugins/bootstrap.min.css" rel="stylesheet">
 <link href="css/plugins/bootstrap-submenu.css" rel="stylesheet">
@@ -24,25 +21,13 @@
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 <!-- Icon Font-->
-<link href="iconfont/style.css" rel="stylesheet">
+<link href="iconfont/style_font.css" rel="stylesheet">
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Chivo:400,400i,900,900i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 <!-- Google map -->
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 </head>
 <body class="home">
-<!-- Loader -->
-<div id="loader-wrapper" class="loader-on">
-<div id="loader">
-<div class="battery">
-<span class="battery_item"></span>
-<span class="battery_item"></span>
-<span class="battery_item"></span>
-</div>
-<div class="text">Loading ...</div>
-</div>
-</div>
-<!-- //Loader -->
 <!-- Header -->
 <header class="page-header sticky">
 <!-- Fixed navbar -->
@@ -80,36 +65,17 @@
 </div>
 <div id="slidemenu" data-hover="dropdown" data-animations="fadeIn">
 <ul class="nav navbar-nav">
-<li class="active"><a href="index.html" class="shadow-effect">Home</a></li>
-<li><a href="about.html" class="shadow-effect">About</a></li>
-<li class="dropdown"><a href="services.html" data-toggle="dropdown" data-submenu="" class="shadow-effect">Services<span class="ecaret"></span></a>
-<ul class="dropdown-menu" role="menu">
-<li><a href="service-page-1.html">Laptop Repair</a></li>
-<li><a href="service-page-2.html">PC Repair</a></li>
-<li><a href="service-page-3.html">Mac Repair</a></li>
-<li><a href="service-page-4.html">Data Backup and Recovery</a></li>
-<li><a href="service-page-5.html">Malware and Virus Removal</a></li>
-<li><a href="service-page-6.html">Software Installation</a></li>
-<li><a href="service-page-7.html">Hardware Updates</a></li>
-<li><a href="service-page-8.html">Custom Built Computers</a></li>
-<li><a href="service-page-9.html">Network / Servers</a></li>
-</ul>
+<li class="active"><a href="#" class="shadow-effect">Home</a></li>
+<li><a href="" class="shadow-effect">About</a></li>
+<li><a href="" class="shadow-effect">Services<span class="ecaret"></span></a>
 </li>
-<li><a href="prices.html" class="shadow-effect">Prices</a>
+
+<li><a href="" class="shadow-effect">Testimonials</a>
 </li>
-<li class="dropdown"><a href="blog.html" data-toggle="dropdown" data-submenu="" class="shadow-effect">Blog<span class="ecaret"></span></a>
-<ul class="dropdown-menu" role="menu">
-<li><a href="blog.html">Blog Classic</a></li>
-<li><a href="blog-card.html">Blog Post Card</a></li>
-<li><a href="blog-single.html">Blog Single post</a></li>
-</ul>
+<li><a href="Login/login.php" class="shadow-effect">Login<span class="ecaret"></span></a>
 </li>
-<li><a href="testimonials.html" class="shadow-effect">Testimonials</a>
-</li>
-<li><a href="faq.html" class="shadow-effect">Tips & FAQ</a>
-</li>
-<li><a href="shop.html" class="shadow-effect">Shop</a> </li>
-<li><a href="contact.html" class="shadow-effect">Contact</a>
+<li><a href="" class="shadow-effect">Pay Now</a> </li>
+<li><a href="" class="shadow-effect">Contact</a>
 </li>
 </ul>
 </div>
@@ -171,7 +137,7 @@
 <div class="image">
 <img src="images/category-img-01.jpg" alt="">
 </div>
-<div class="image_hover light">
+<div class="image_hover color">
 <div class="vert-wrap">
 <div class="vert">
 <p>Computer Repair specializes in repairs of all kinds of Apple products including, MacBooks, iMacs, Mac Pros, Macbook retina and Mac Mini’s. We only Use Original Apple Parts we will never install a knock off part into your Mac product.</p>
@@ -194,7 +160,7 @@
 <div class="image">
 <img src="images/category-img-02.jpg" alt="">
 </div>
-<div class="image_hover">
+<div class="image_hover color">
 <div class="vert-wrap">
 <div class="vert">
 <p>While You Wait or Same Day Service If you decide not to proceed the repair of your laptop, we will pay you cash to buy it and return your hard drive or transfer data for you.</p>
@@ -205,8 +171,8 @@
 <div class="caption middle">
 <div class="vert-wrap">
 <div class="vert">
-<h3 class="name">Laptop</h3>
-<p class="white">Repair</p>
+<h3 class="name white">Laptop</h3>
+<p>Repair</p>
 </div>
 </div>
 </div>
@@ -445,7 +411,7 @@
 <div class="text-center">
 <h2>Getting Help is Easy</h2>
 <p class="info">Have a question? Give us a call or stop by for a quote. It's that easy.</p>
-<div class="btn-inline"><a class="btn btn-invert-alt wide modal-popup-link" href="#modalForm1">Book an engineer</a><a class="btn btn-white wide" href="contact.html">Ask a Question</a></div>
+<a class="btn btn-white wide" href="contact.html">Ask a Question</a></div>
 </div>
 </div>
 </div>
@@ -456,7 +422,7 @@
 <div class="row">
 <div class="col-md-4">
 <div class="text-img animation" data-animation="fadeInLeft" data-animation-delay="0.5s">
-<div class="image"><img src="images/sertficate-01.png" alt=""></div>
+<div class="image"><img src="images/Time.png" alt=""></div>
 <h5 class="title">We Value Your Time</h5>
 <p>Our tech support saves your time and energy and lets you enjoy your computer to the max.</p>
 </div>
@@ -486,14 +452,6 @@
 <div class="footer-content">
 <div class="back-to-top"><a href="#top"><span class="icon icon-chevron-arrow-up"></span></a></div>
 <div class="container">
-<ul class="footer-menu">
-<li><a href="services.html">iPhone Repair </a></li>
-<li><a href="services.html">iPad Repair</a></li>
-<li><a href="services.html">Laptop Repair</a></li>
-<li><a href="services.html">Mac Repair</a></li>
-<li><a href="services.html">Computer Repair</a></li>
-<li><a href="services.html">Smartphone Repair</a></li>
-</ul>
 <div class="social-links">
 <ul>
 <li>
@@ -512,23 +470,16 @@
 </div>
 <div class="row footer-columns">
 <div class="col-lg-2 visible-lg"></div>
-<div class="col-md-4 col-lg-3">
+<div class="col-md-4 col-lg-5">
 <div class="contact-info"><i class="icon icon-placeholder-for-map"></i>5604 Willow Crossing Ct,
 <br> Clifton, VA, 20124</div>
 </div>
-<div class="col-md-4 col-lg-3">
+<div class="col-md-4 col-lg-5">
 <div class="contact-info"><i class="icon icon-clock"></i>Mon-Fri: 7:00am-7:00pm
 <br> Sat-Sun: 10:00am-5:00pm</div>
 </div>
-<div class="col-lg-2 visible-lg"></div>
-<div class="col-md-4 col-lg-3">
-<ul class="footer-links">
-<li><a href="about.html">Terms and Conditions</a></li>
-<li><a href="about.html">Privacy Policy</a></li>
-</ul>
-</div>
-</div>
-<div class="copyright">© 2017 Computer Repair. All Rights Reserved.</div>
+<br><br><br><br>
+<div class="copyright">© 2018 Our Company All Rights Reserved.</div>
 </div>
 </div>
 </div>
