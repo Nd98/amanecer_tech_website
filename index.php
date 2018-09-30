@@ -65,18 +65,24 @@
 </div>
 <div id="slidemenu" data-hover="dropdown" data-animations="fadeIn">
 <ul class="nav navbar-nav">
-<li class="active"><a href="#" class="shadow-effect">Home</a></li>
-<li><a href="" class="shadow-effect">About</a></li>
-<li><a href="" class="shadow-effect">Services<span class="ecaret"></span></a>
+<li class="active">
+	<a href="#" class="shadow-effect">Home
+	</a>
 </li>
-
-<li><a href="" class="shadow-effect">Testimonials</a>
+<li>
+	<a href="#category" class="shadow-effect">
+		Categories
+	</a>
 </li>
-<li><a href="Login/login.php" class="shadow-effect">Login<span class="ecaret"></span></a>
+<li>
+	<a href="#services" class="shadow-effect">
+		Services
+	</a>
 </li>
-<li><a href="" class="shadow-effect">Pay Now</a> </li>
-<li><a href="" class="shadow-effect">Contact</a>
-</li>
+<li><a href="#about_us" class="shadow-effect">About US</a></li>
+<li><a href="#testimonials" class="shadow-effect">Testimonials</a></li>
+<li><a href="#why_us" class="shadow-effect">Why US?</a></li>
+<li><a href="#contact_us" class="shadow-effect">Contact US</a></li>
 </ul>
 </div>
 </div>
@@ -126,6 +132,7 @@
 </div>
 </div>
 <!-- /#slick -->
+<div id="category"></div>
 </div>
 <!-- Slider -->
 <!-- Category Block -->
@@ -141,7 +148,7 @@
 <div class="vert-wrap">
 <div class="vert">
 <p>Computer Repair specializes in repairs of all kinds of Apple products including, MacBooks, iMacs, Mac Pros, Macbook retina and Mac Mini’s. We only Use Original Apple Parts we will never install a knock off part into your Mac product.</p>
-<p><a href="services.html" class="btn btn-sm">More info</a></p>
+<p><a href="#services" class="btn btn-sm">More info</a></p>
 </div>
 </div>
 </div>
@@ -164,7 +171,7 @@
 <div class="vert-wrap">
 <div class="vert">
 <p>While You Wait or Same Day Service If you decide not to proceed the repair of your laptop, we will pay you cash to buy it and return your hard drive or transfer data for you.</p>
-<p><a href="services.html" class="btn btn-sm">More info</a></p>
+<p><a href="#services" class="btn btn-sm">More info</a></p>
 </div>
 </div>
 </div>
@@ -187,7 +194,7 @@
 <div class="vert-wrap">
 <div class="vert">
 <p>We service all makes and models of Computers. Most Computers are repaired same day with parts available in stock. We service all models including: HP, Apple, Acer, Lenovo/IBM, Dell, Samsung, Gateway, Asus, Alienware & more… </p>
-<p><a href="services.html" class="btn btn-sm">More info</a></p>
+<p><a href="#services" class="btn btn-sm">More info</a></p>
 </div>
 </div>
 </div>
@@ -217,6 +224,7 @@
 <a class="btn btn-invert" href="contact.html">Contact Us</a></div>
 </div>
 </div>
+<div id="services"></div>
 </div>
 <!-- //Get Now Block -->
 <!-- Services Block -->
@@ -260,6 +268,7 @@
 </div>
 </div>
 </div>
+<div id="about_us"></div>
 </div>
 <!-- //Services Block -->
 <!-- Block -->
@@ -309,6 +318,7 @@
 </div>
 </div>
 </div>
+<div id="testimonials"></div>
 </div>
 <!-- //Block -->
 <!-- Testimonials Block -->
@@ -345,6 +355,7 @@
 </div>
 </div>
 </div>
+<div id="why_us"></div>
 </div>
 <!-- //Testimonials Block -->
 <!-- Block -->
@@ -403,6 +414,7 @@
 </div>
 </div>
 </div>
+<div id="contact_us"></div>
 </div>
 <!-- //Block -->
 <!-- Question Block -->
@@ -597,5 +609,14 @@
 <script src="js/plugins/jquery.validate.min.js"></script>
 <!-- Custom JavaScripts -->
 <script src="js/custom.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+      <script type="text/javascript">
+      $('a').click(function(){
+      $('html, body').animate({
+          scrollTop: $( $(this).attr('href') ).offset().top
+      }, 500);
+        return false;
+    });
+    </script>
 </body>
 </html>
