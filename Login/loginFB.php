@@ -14,8 +14,8 @@
 	use Facebook\HttpClients\FacebookHttpable;
 	
 	// Edit Following 2 Lines
-	FacebookSession::setDefaultApplication( '254120925130962','83a7f20c4b1482de26f4e104ebffd3a8' );
-	$helper = new FacebookRedirectLoginHelper('http://amanecer.tech/Login/loginFB.php');
+	FacebookSession::setDefaultApplication( '175289520046157','4b9afcd28bdd911530b6014e94a63dd7' );
+	$helper = new FacebookRedirectLoginHelper('https://amanecer.tech/Login/loginFB.php');
 	
 	try {$session = $helper->getSessionFromRedirect();} catch( FacebookRequestException $ex ) {} catch( Exception $ex ) {}
 	if ( isset( $session ) ) 
