@@ -6,10 +6,10 @@
 	$type = getUserType($email);
 
 	if($type=='user'){
-		header("Location: ../index.php");
+		header("Location: ../user.php");
 	}
 	else if($type=='admin'){
-		header("Location: admin.php");
+		header("Location: ../admin.php");
 	}
 	else{
 		echo "There is some issue with the Server";

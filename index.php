@@ -1,4 +1,10 @@
-
+<?php 
+	session_start();
+	if(isset($_SESSION['logincust']) OR isset($_SESSION['register']) OR isset($_SESSION['login']))
+    {
+        header('Location: user.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +20,7 @@
 <link href="css/plugins/slick.css" rel="stylesheet">
 <link href="css/plugins/magnific-popup.css" rel="stylesheet">
 <link href="css/plugins/bootstrap-datetimepicker.css" rel="stylesheet">
-<link href="css/custom.css" rel="stylesheet">
+<link href="css/c.css" rel="stylesheet">
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -33,17 +39,28 @@
 <!-- Fixed navbar -->
 <nav class="navbar" id="slide-nav">
 <div class="container">
+<div id="slidemenu" data-hover="dropdown" data-animations="fadeIn">
+    <ul class="nav navbar-nav">
+        <li class="active"><a href="#" class="shadow-effect">Home</a></li>
+        <li><a href="#category" class="shadow-effect">Categories</a></li>
+        <li><a href="#services" class="shadow-effect">Services</a></li>
+        <li><a href="#about_us" class="shadow-effect">About US</a></li>
+        <li><a href="#testimonials" class="shadow-effect">Testimonials</a></li>
+        <li><a href="#why_us" class="shadow-effect">Why US?</a></li>
+        <li><a href="#contact_us" class="shadow-effect">Contact US</a></li>
+    </ul>
+</div>
 <div class="navbar-header">
 <div class="mobile-topline">
 <button type="button" class="navbar-toggle"><i class="icon icon-interface icon-menu"></i><i class="icon icon-cancel"></i></button>
-<div class="phone-number"><span>+1-800-1234567</span></div>
+<div class="phone-number"><span>+1866-217-0652</span></div>
 </div>
 <div class="header-top">
 <div class="row">
 <div class="col-sm-6">
 <div class="logo">
-<a href="index.html"><span class="hidden-xs"><img src="images/logo.gif" alt="Logo"></span>
-<span class="visible-xs"><img src="images/logo-mobile.png" alt="Logo"></span>
+<a href="index.php"><span class="hidden-xs"><img src="images/l1.png" alt="amanecer"></span>
+<span class="visible-xs"><img src="images/l1.png" alt="amanecer"></span>
 </a>
 </div>
 </div>
@@ -51,40 +68,19 @@
 <div class="phone">
 <div class="phone-wrapper">
 <div class="under-number">Need tech support?</div>
-<div class="number"><span>+1-800-1234567</span></div>
+<div class="number"><span>+1866-217-0652</span></div>
 </div>
 <div class="right-text">
-<div class="item arrow animation hoveranimation" data-animation="rotateInUpRight" data-animation-delay="0.5s"><img src="images/call-us-arrow-1.png" alt=""></div>
-<div class="item text1 animation hoveranimation" data-animation="fadeInUp" data-animation-delay="0.75s"><img src="images/call-us-arrow-2.png" alt=""></div>
-<div class="item text2 animation hoveranimation" data-animation="fadeInUp" data-animation-delay="1s"><img src="images/call-us-arrow-3.png" alt=""></div>
+<div class="item arrow animation" data-animation="rotateInUpRight" data-animation-delay="0.5s" data-animation = "mymove infinite" data-animation-duration = "3s"><img src="images/call-us-arrow-1.png" alt=""></div>
+<div class="item arrow animation" data-animation="rotateInUpRight" data-animation-delay="0.5s" data-animation = "mymove infinite" data-animation-duration = "5s"><img src="images/call-us-arrow-2.png" alt=""></div>
+<div class="item arrow animation" data-animation="rotateInUpRight" data-animation-delay="0.5s" data-animation = "mymove infinite" data-animation-duration = "7s"><img src="images/call-us-arrow-3.png" alt=""></div>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div id="slidemenu" data-hover="dropdown" data-animations="fadeIn">
-<ul class="nav navbar-nav">
-<li class="active">
-	<a href="#" class="shadow-effect">Home
-	</a>
-</li>
-<li>
-	<a href="#category" class="shadow-effect">
-		Categories
-	</a>
-</li>
-<li>
-	<a href="#services" class="shadow-effect">
-		Services
-	</a>
-</li>
-<li><a href="#about_us" class="shadow-effect">About US</a></li>
-<li><a href="#testimonials" class="shadow-effect">Testimonials</a></li>
-<li><a href="#why_us" class="shadow-effect">Why US?</a></li>
-<li><a href="#contact_us" class="shadow-effect">Contact US</a></li>
-</ul>
-</div>
+
 </div>
 </nav>
 </header>
@@ -92,45 +88,58 @@
 <!-- Content -->
 <div id="page-content">
 <!-- Slider -->
-<div id="mainSliderWrapper">
-<div id="mainSlider">
-<div class="slide">
-<div class="img--holder" style="background-image: url(images/slider/slide3.jpg);"></div>
-<div class="slide-content center">
-<div class="vert-wrap">
-<div class="vert">
-<h3 data-animation="fadeInUp" data-delay="0s">We are <span>Satisfied</span></h3>
-<h4 data-animation="fadeInUp" data-delay="0.25s">with Our Work</h4>
-<p data-animation="fadeInUp" data-delay="0.5s">We can handle just about any tech question or computer repair that comes our way.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="slide">
-<div class="img--holder" style="background-image: url(images/slider/slide1.jpg);"></div>
-<div class="slide-content center">
-<div class="vert-wrap">
-<div class="vert">
-<h3 data-animation="fadeInUp" data-delay="0s">Cell Phone <span>Repairs</span></h3>
-<h4 data-animation="fadeInUp" data-delay="0.25s">Fast, Affordable Prices</h4>
-<p data-animation="fadeInUp" data-delay="0.5s">We are the repair specialist for all cellphone brands and models</p>
-</div>
-</div>
-</div>
-</div>
-<div class="slide">
-<div class="img--holder" style="background-image: url(images/slider/slide2.jpg);"></div>
-<div class="slide-content center">
-<div class="vert-wrap">
-<div class="vert">
-<h3 data-animation="fadeInUp" data-delay="0s"><span>PC Support</span> that’s there</h3>
-<h4 data-animation="fadeInUp" data-delay="0.25s">Before You Need it.</h4>
-<p data-animation="fadeInUp" data-delay="0.5s">The best way to fix your PC problems</p>
-</div>
-</div>
-</div>
-</div>
-</div>
+		<div id="mainSliderWrapper">
+			<div id="mainSlider">
+				<div class="slide">
+					<div class="img--holder" style="background-image: url(images/slider/s1.jpg);"></div>
+						<div class="slide-content center">
+							<div class="vert-wrap">
+								<div class="vert">
+									<h3 data-animation="fadeInUp" data-delay="0s">We are <span>Satisfied</span></h3>
+									<h4 data-animation="fadeInUp" data-delay="0.25s">with Our Work</h4>
+									<p data-animation="fadeInUp" data-delay="0.5s">We can handle just about any tech question or computer repair that comes our way.</p>
+									<div class="btn-inline">
+										<p data-animation="fadeInUp" data-delay="0.75s"><a href="Login/login.php" class="btn form-popup-link modal-popup-link">Login</a>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+				</div>
+				<div class="slide">
+					<div class="img--holder" style="background-image: url(images/slider/3.jpg);"></div>
+						<div class="slide-content center">
+							<div class="vert-wrap">
+								<div class="vert">
+									<h3 data-animation="fadeInUp" data-delay="0s">Best <span>Antivirus</span> solution</h3>
+									<h4 data-animation="fadeInUp" data-delay="0.25s">Power for you</h4>
+									<p data-animation="fadeInUp" data-delay="0.5s"><span>Light weight</span> & <span>intuitive protection</span> powered by next generation cyber security for alll
+</p>
+								<div class="btn-inline">
+									<p data-animation="fadeInUp" data-delay="0.75s"><a href="Login/login.php" class="btn form-popup-link modal-popup-link">Login</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="img--holder" style="background-image: url(images/slider/slide2.jpg);"></div>
+						<div class="slide-content center">
+							<div class="vert-wrap">
+								<div class="vert">
+									<h3 data-animation="fadeInUp" data-delay="0s"><span>PC Support</span> that’s there</h3>
+									<h4 data-animation="fadeInUp" data-delay="0.25s">Before You Need it.</h4>
+									<p data-animation="fadeInUp" data-delay="0.5s">The best way to fix your PC problems</p>
+									<div class="btn-inline">
+											<p data-animation="fadeInUp" data-delay="0.75s"><a href="Login/login.php" class="btn form-popup-link modal-popup-link">Login</a>
+											</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 <!-- /#slick -->
 <div id="category"></div>
 </div>
@@ -140,27 +149,50 @@
 <div class="container">
 <div class="row category-carousel">
 <div class="col-sm-4">
-<div class="category-block animation" data-animation="zoomIn" data-animation-delay="0s">
-<div class="image">
-<img src="images/category-img-01.jpg" alt="">
+    <div class="category-block animation" data-animation="zoomIn" data-animation-delay="0s">
+        <div class="image">
+            <img src="images/antivirus3.jpg" alt="">
+        </div>
+        <div class="image_hover color">
+            <div class="vert-wrap">
+                <div class="vert">
+                    <p>Our Antivirus softwares are designed to prevent computer infections by detecting malicious software, commonly called malware, on your computer and, when appropriate, removing the malware and disinfecting the computer.</p>
+                    <p><a href="#services" class="btn btn-sm">More info</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="caption top">
+            <div class="vert-wrap">
+                <div class="vert">
+                    <h3 class="name">Antivirus</h3>
+                    <p>Solution</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="image_hover color">
-<div class="vert-wrap">
-<div class="vert">
-<p>Computer Repair specializes in repairs of all kinds of Apple products including, MacBooks, iMacs, Mac Pros, Macbook retina and Mac Mini’s. We only Use Original Apple Parts we will never install a knock off part into your Mac product.</p>
-<p><a href="#services" class="btn btn-sm">More info</a></p>
-</div>
-</div>
-</div>
-<div class="caption top">
-<div class="vert-wrap">
-<div class="vert">
-<h3 class="name">Apple & <br>Mac</h3>
-<p>Repair</p>
-</div>
-</div>
-</div>
-</div>
+<div class="col-sm-4" style = "">
+    <div class="category-block animation" data-animation="zoomIn" data-animation-delay="0s">
+        <div class="image">
+            <img src="images/category-img-01.jpg" alt="">
+        </div>
+        <div class="image_hover color">
+            <div class="vert-wrap">
+                <div class="vert">
+                    <p>Amanecer Tech specializes in repairs of all kinds of Apple products including, MacBooks, iMacs, Mac Pros, Macbook retina and Mac Mini’s. We only Use Original Apple Parts we will never install a knock off part into your Mac product.</p>
+                    <p><a href="#services" class="btn btn-sm">More info</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="caption top">
+            <div class="vert-wrap">
+                <div class="vert">
+                    <h3 class="name">Apple & <br>Mac</h3>
+                    <p>Repair</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="col-sm-4">
 <div class="category-block animation" data-animation="zoomIn" data-animation-delay="0s">
@@ -217,11 +249,11 @@
 <div class="container">
 <div class="text-center">
 <h2 class="h-lg">Get <span class="color">Your Computer</span> Fixed NOW!</h2>
-<h3 class="subtitle">+1-800-1234567</h3>
+<h3 class="subtitle">+1866-217-0652</h3>
 <p class="info">for one of our professional computer repair techs to help you with your Desktop, Laptop, Mac or other inquiry</p>
 <div class="btn-inline">
-<a class="btn form-popup-link modal-popup-link" href="#modalForm1">Get your repair</a>
-<a class="btn btn-invert" href="contact.html">Contact Us</a></div>
+<!--<a class="btn form-popup-link modal-popup-link" href="#modalForm1">Get your repair</a>-->
+<button class="btn btn-invert">Contact Us</button></div>
 </div>
 </div>
 <div id="services"></div>
@@ -246,7 +278,7 @@
 <div class="text-icon animation" data-animation="scaleOut" data-animation-delay="0s">
 <div class="icon-wrapper"><span><i class="icon icon-hard-disk"></i><span class="icon-hover"></span></span>
 </div>
-<h4 class="title">Hardware & Software Installation</h4>
+<h4 class="title">Software Installation</h4>
 <p class="text">We can help you determine what hardware install or software installing solutions will best fit your needs. </p>
 </div>
 </div>
@@ -278,7 +310,7 @@
 <div class="col-md-6 animation" data-animation="fadeInLeft" data-animation-delay="0s">
 <h2>About <span class="color">Us</span></h2>
 <p class="info">Your Local Computer Specialist Servicing</p>
-<p>Computer Repair is dedicated to providing the best customer service and computer repair available to you. When your Laptop, PC or Mac needs repairing, you won’t have to worry for long! Our technicians are skilled in dealing with all computers and gadgets whether you need home or business computer repairs.</p>
+<p>Amanecer Tech is dedicated to providing the best customer service and computer repair available to you. When your Laptop, PC or Mac needs repairing, you won’t have to worry for long! Our technicians are skilled in dealing with all computers and gadgets whether you need home or business computer repairs.</p>
 <ul class="marker-list">
 <li>Microsoft Windows PC Computer Repair</li>
 <li>Apple iMac and Macbook Computer Repair</li>
@@ -292,28 +324,11 @@
 </div>
 <div class="divider visible-sm visible-xs"></div>
 <div class="col-md-6 animation" data-animation="fadeInRight" data-animation-delay="0s">
-<h2>Free <span class="color">Estimate</span></h2>
-<p class="info">Get your computer fixed today!</p>
+<h2>Rajesh <span class="color">Mishra</span></h2>
+<p class="info">Owner & CEO</p>
 <div class="quote-form">
-<form id="quoteform1" class="quote-form-js" method="post" novalidate>
-<div class="successform">
-<p>Your message was sent successfully!</p>
-</div>
-<div class="errorform">
-<p>Something went wrong, try refreshing and submitting the form again.</p>
-</div>
-<div class="wrapper">
-<div class="input-half pull-left">
-<input type="text" placeholder="Name" name="name">
-</div>
-<div class="input-half pull-right">
-<input type="text" placeholder="Email Address" name="email">
-</div>
-</div>
-<input type="text" placeholder="Phone" name="phone" class="input-full">
-<textarea placeholder="Message" name="message" class="input-full"></textarea>
-<button type="submit" id="submit1" class="btn">Get a Quote</button>
-</form>
+<p>Mr. Rajesh is a dynamic goal-oriented professional with eleven years of entrepreneurial experience in a full range of IT Services, Marketing and Business Consultations. Prior to founding Amanecer tech, He enjoyed a successful career in Consulting/Online  service Developments serving various small to mid-range clients across the globe since the age of 24.</p>
+<p>It started when he utilized the potential of a computer with internet connection and created his own social networking website, through which he earned the knowledge which later inspired a lot of other individuals who wanted to build their dreams at that point in time, He realized his true potential of offering Repair services. He leads the Local and International Business team responsible for all client acquisitions and manages their successful introduction to Amanecer. He is committed to ensuring clients have a positive experience with Amanecer and he maintains an active role in the operational process and overall success beyond implementations.</p>
 </div>
 </div>
 </div>
@@ -323,6 +338,7 @@
 <!-- //Block -->
 <!-- Testimonials Block -->
 <div class="block bg-2">
+<canvas id="network"></canvas>
 <div class="container">
 <div class="testimonials">
 <h2 class="h-lg text-center">Our <span class="color">Testimonials</span></h2>
@@ -348,7 +364,7 @@
 <div class="inside">
 <h5>Computer Repairs</h5>
 <div class="rating"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></div>
-<div class="text">I have used Computer repair for a very long time and have always been pleased with the services and staff.</div>
+<div class="text">I have used Amanecer Tech for a very long time and have always been pleased with the services and staff.</div>
 <div class="username">– Frances J. Nicastro</div>
 </div>
 </div>
@@ -409,7 +425,7 @@
 <div class="caption">
 <div class="icon-big"><span class="icon icon-stethoscope"></span></div>
 <h5 class="title">Affordable Diagnosis</h5>
-<div class="text">We will diagnose your issues, provide you with options and give you a price for FREE!</div>
+<div class="text">We will diagnose your issues, provide you with options and give you a Better price!</div>
 </div>
 </div>
 </div>
@@ -423,7 +439,7 @@
 <div class="text-center">
 <h2>Getting Help is Easy</h2>
 <p class="info">Have a question? Give us a call or stop by for a quote. It's that easy.</p>
-<a class="btn btn-white wide" href="contact.html">Ask a Question</a></div>
+<!--<a class="btn btn-white wide" href="contact.html">Ask a Question</a></div>-->
 </div>
 </div>
 </div>
@@ -478,7 +494,7 @@
 </ul>
 </div>
 <div class="footer-phone">
-<i class="icon icon-phone-receiver"></i>Call Us to Our Office <span class="number">+1-800-1234567</span>
+<i class="icon icon-phone-receiver"></i>Call Us to Our Office <span class="number">+1866-217-0652</span>
 </div>
 <div class="row footer-columns">
 <div class="col-lg-2 visible-lg"></div>
@@ -487,115 +503,14 @@
 <br> Clifton, VA, 20124</div>
 </div>
 <div class="col-md-4 col-lg-5">
-<div class="contact-info"><i class="icon icon-clock"></i>Mon-Fri: 7:00am-7:00pm
-<br> Sat-Sun: 10:00am-5:00pm</div>
+<div class="contact-info"><i class="icon icon-clock"></i>Mon-Fri: 10:00am-9:00pm
+</div>
 </div>
 <br><br><br><br>
-<div class="copyright">© 2018 Our Company All Rights Reserved.</div>
-</div>
+<div class="copyright" style="text-align: center">© 2018 All Rights Reserved.</div>
 </div>
 </div>
 <!-- //Footer -->
-<div id="modalForm1" class="form-modal">
-<form class="booking-form" method="post">
-<h3>Book an Engineer</h3>
-<div class="successform">
-<p>Your message was sent successfully!</p>
-</div>
-<div class="errorform">
-<p>Something went wrong, try refreshing and submitting the form again.</p>
-</div>
-<div class="form-box form-box--width-1">
-<div class="form-box-label">Collection Day</div>
-<div class="datetimepicker-wrap">
-<input type="text" name="date" class="form-control datetimepicker" placeholder="">
-</div>
-</div>
-<div class="form-box form-box--width-2">
-<div class="form-box-row">
-<div class="form-box-col-1">
-<div class="form-box-label">Computer / Laptop</div>
-<div class="select-wrapper">
-<select name="select1" class="form-control">
-<option value="">Select Something</option>
-<option value="Computer">Computer</option>
-<option value="Laptop">Laptop</option>
-</select>
-</div>
-</div>
-<div class="form-box-col-1">
-<div class="form-box-label">Brand</div>
-<div class="select-wrapper">
-<select name="select2" class="form-control">
-<option value="Aser">Aser</option>
-<option value="Apple">Apple</option>
-<option value="Asus">Asus</option>
-<option value="Lenovo">Lenovo</option>
-<option value="Hewlett Packard">Hewlett Packard</option>
-<option value="Dell">Dell</option>
-<option value="Toshiba">Toshiba</option>
-</select>
-</div>
-</div>
-<div class="form-box-col-1">
-<div class="form-box-label">Operating System</div>
-<div class="select-wrapper">
-<select name="select3" class="form-control">
-<option value="Microsoft Windows">Microsoft Windows</option>
-<option value="Linux">Linux</option>
-<option value="macOS">macOS</option>
-<option value="Google Chrome OS">Google Chrome OS</option>
-</select>
-</div>
-</div>
-</div>
-<div class="clearfix"></div>
-</div>
-<div class="clearfix"></div>
-<div class="form-box form-box--width-3">
-<div class="form-box-row">
-<div class="form-box-col-2">
-<div class="form-box-label">First name <span>*</span></div>
-<input type="text" name="name" class="form-control" value="">
-</div>
-<div class="form-box-col-2">
-<div class="form-box-label">Last name</div>
-<input type="text" name="lastname" class="form-control" value="">
-</div>
-</div>
-<div class="clearfix"></div>
-<div class="form-box-row">
-<div class="form-box-col-2">
-<div class="form-box-label">Email address <span>*</span></div>
-<input type="text" name="email" class="form-control" value="">
-</div>
-<div class="form-box-col-2">
-<div class="form-box-label">Contact phone number</div>
-<input type="text" name="phone" class="form-control" value="">
-</div>
-</div>
-<div class="clearfix"></div>
-<div class="form-box-row">
-<div class="form-box-col-2">
-<div class="form-box-label">Address</div>
-<input type="text" name="address" class="form-control" value="">
-</div>
-<div class="form-box-col-2">
-<div class="form-box-label">City</div>
-<input type="text" name="city" class="form-control" value="">
-</div>
-</div>
-<div class="clearfix"></div>
-<div class="form-box-row">
-<div class="form-box-label">Special requests</div>
-<textarea name="message" class="form-control"></textarea>
-</div>
-</div>
-<div class="clearfix">
-<button type="submit" id="submit" class="btn pull-right">Send Booking</button>
-</div>
-</form>
-</div>
 <!-- External JavaScripts -->
 <script src="js/jquery.js"></script>
 <script src="js/plugins/bootstrap.min.js"></script>
