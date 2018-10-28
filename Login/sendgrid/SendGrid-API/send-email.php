@@ -22,7 +22,7 @@ function send_email()
 
 	/*Send the mail*/
 	$mail = new SendGrid\Mail($from, $subject, $to, $content);
-	$apiKey = ('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');
+	$apiKey = ('');
 	$sg = new \SendGrid($apiKey);
 
 	/*Response*/
