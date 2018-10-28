@@ -1,0 +1,16 @@
+Login
+firstname
+lastname
+email
+password
+phone_no
+type
+
+shipping_address
+email
+address
+country
+state
+city
+pincode
+
